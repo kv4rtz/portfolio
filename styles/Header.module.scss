@@ -1,0 +1,67 @@
+.main {
+  &-title {
+    width: 700px;
+    @apply text-6xl flex font-bold;
+    & > div {
+      @apply ml-7;
+    }
+  }
+
+  &-wrapper {
+    @apply flex justify-between items-center;
+    & svg {
+      fill: #FFEDD5;
+      width: 600px;
+      height: 600px;
+      animation: spin 15s linear infinite;
+    }
+  }
+}
+
+[data-theme="light"] .main-wrapper svg {
+  fill: #101010;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1750px) {
+  .main {
+    &-image svg {
+      margin: 0;
+      width: 450px;
+      height: 450px;
+    }
+  }
+}
+
+@media (max-width: 1500px) {
+  .main {
+    &-title {
+      justify-content: center;
+      margin: 0 auto;
+    }
+
+    &-image svg {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    &-title {
+      word-spacing: 9999px;
+      @apply flex-col;
+      & > div {
+        @apply m-0
+      }
+    }
+  }
+}

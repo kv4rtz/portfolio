@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #101010;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-zinc-800;
+}
+
+body {
+  font-family: 'Roboto Mono', monospace;
+  background: #101010;
+  @apply text-orange-100 transition-all;
+  height: 6000px;
+
+  &.light {
+    background: #f3f3f3;
+    color: #101010;
+  }
+}
+
+.bg {
+  &-1 {
+    animation: spin 54s linear infinite;
+    filter: blur(10px);
+    @apply fixed -left-52 top-0 -z-10 opacity-10;
+  }
+
+  &-2 {
+    animation: spin 54s linear infinite;
+    filter: blur(10px);
+    @apply fixed -right-52 -bottom-52 -z-10 opacity-10;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

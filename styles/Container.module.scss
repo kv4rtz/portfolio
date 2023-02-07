@@ -1,0 +1,15 @@
+.container {
+  @apply px-32;
+}
+
+@media (max-width: 768px) {
+  .container {
+    @apply px-16
+  }
+}
+
+@media (max-width: 425px) {
+  .container {
+    @apply px-8
+  }
+}

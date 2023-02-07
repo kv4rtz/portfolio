@@ -1,0 +1,35 @@
+.skills {
+  &-title {
+    @apply text-4xl font-bold mb-6;
+  }
+
+  &-wrapper {
+    border-bottom: 1px solid;
+    @apply pt-12 pb-6 border-amber-100;
+  }
+
+  &-blocks {
+    @apply flex gap-10 mt-10;
+  }
+
+  &-block {
+
+    & > svg {
+      @apply text-4xl mb-2;
+    }
+
+    @apply flex flex-col items-center text-xl;
+  }
+}
+
+@media (max-width: 425px) {
+  .skills {
+    &-title {
+      @apply text-center;
+    }
+
+    &-blocks {
+      @apply flex-col;
+    }
+  }
+}
